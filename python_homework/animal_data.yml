@@ -1,0 +1,6 @@
+
+maomao: &dongwu1 {name: benben,color: white,age: 2,sex: female,maofa: 短毛}
+gougou: &dongwu2 {name: doudou,color: black,age: 6,sex: male,maofa: 长毛}
+
+default:
+  <<: *dongwu2
