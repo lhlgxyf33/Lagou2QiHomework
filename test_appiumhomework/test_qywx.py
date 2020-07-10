@@ -37,10 +37,10 @@ class TestDirectory:
         #点击通讯录
         self.driver.find_element(MobileBy.XPATH,"//*[@resource-id='com.tencent.wework:id/gud']/android.widget.RelativeLayout[2]").click()
         #滑动页面至添加成员处并点击
-        self.driver.find_element_by_android_uiautomator(f'new UiScrollable(new UiSelector().'
-                        'scrollable(true).instance(0)).'
-                        'scrollIntoView(new UiSelector().text("添加成员").'
-                        'instance(0));').click()
+        self.driver.find_element_by_android_uiautomator('new UiScrollable(new UiSelector().\
+                        scrollable(true).instance(0)).\
+                        scrollIntoView(new UiSelector().text("添加成员").\
+                        instance(0));').click()
         #点击手动输入添加
         self.driver.find_element(MobileBy.XPATH,"//*[@text='手动输入添加']").click()
         #姓名输入框输入对应参数name
@@ -80,10 +80,10 @@ class TestDirectory:
         #点击成员与部门管理
         self.driver.find_element(MobileBy.XPATH,"//*[@text='成员与部门管理']").click()
         #滚动查找到对应name的元素并点击
-        self.driver.find_element_by_android_uiautomator(f'new UiScrollable(new UiSelector().'
-                                                        'scrollable(true).instance(0)).'
-                                                        'scrollIntoView(new UiSelector().text("{name}").'
-                                                        'instance(0));').click()
+        self.driver.find_element_by_android_uiautomator(f'new UiScrollable(new UiSelector().\
+                                                        scrollable(true).instance(0)).\
+                                                        scrollIntoView(new UiSelector().text("{name}").\
+                                                        instance(0));').click()
         #点击删除成员
         self.driver.find_element(MobileBy.XPATH,"//*[@text='删除成员']").click()
         #点击确定
