@@ -2,14 +2,12 @@ import pytest
 from pythoncode.cal import Calculator
 import yaml
 
+def pydakai():
+    with yaml.safe_load(open("./data.yml")) as f:
+        data=yaml.safe_load(f)
+        return data
 @pytest.mark.parametrize(("a", "b"), yaml.safe_load(open("./data.yml")))
 class TestCal:
-#     def setup_class(self):
-#         self.cal=Calculator()
-#
-#     def teardown_class(self):
-#         self.cal=Calculator()
-
     @pytest.mark.add
     def test_add(self,reckon,a,b):
         print("加法",a,"+",b)
